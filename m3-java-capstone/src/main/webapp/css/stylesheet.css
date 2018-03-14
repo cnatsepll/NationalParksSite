@@ -1,0 +1,70 @@
+body {
+	background-color: rgba(79, 75, 63, 0.925);
+}
+
+.logo {
+	heigth: 150px;
+	width: 225px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.centered {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+
+.parks {
+	font-family: Helvetica;
+	font-size: 1.2em;
+	color: rgb(242, 242, 242);
+	text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px rgb(0, 0, 0);
+	display: grid;
+	border: solid 3px;
+	border-radius: 5px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(47, 94, 78, 1);
+	margin-bottom: 30px;
+}
+
+.parkImage img {
+	grid-column: span 2;
+	width: 100%;
+	height: 100%;
+}
+
+.parkInfo {
+	grid-column: 2;
+	height: auto;
+	width: 90%;
+	grid-row-template: 3;
+	display: grid;
+	grid-row-template: 3;
+	margin-left: 10px;
+}
+
+.parkName {
+	margin-top: 25px;
+	width: 35em;
+	grid-row: 1;
+}
+
+.location {
+	grid-row: 2;
+	padding: 5px;
+}
+
+.desciption {
+	grid-row: 3;
+	padding-top: 5px;
+}
