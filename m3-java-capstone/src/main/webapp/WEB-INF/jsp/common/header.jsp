@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Ubuntu">
 <meta charset="UTF-8">
 <title>National Parks Geek</title>
 <c:url value="/css/stylesheet.css" var="styleHref" />
@@ -11,24 +13,39 @@
 
 <body>
 	<header>
-	<div class="row">
-		<c:url value="/" var="homePageHref" />
-		<c:url value="/img/logo.png" var="logoSrc" />
-		<a href="${homePageHref}"> <img class="logo" src="${logoSrc}"
-			alt="National Park Geek Logo" />
-		</a>
-		
-		<h1>Explore the National Parks!</h1>
+		<div class="header center" id="myHeader">
+			<c:url value="/" var="homePageHref" />
+			<c:url value="/img/logo.png" var="logoSrc" />
+			<a href="${homePageHref}"> <img class="logo" src="${logoSrc}"
+				alt="National Park Geek Logo" />
+			</a>
+
+			<h1>Explore the National Parks!</h1>
+
+			<nav>
+
+				<c:url var="homeUrl" value="/" />
+				<a href="${homeUrl}">Home Page</a>
+				<c:url var="surveyUrl" value="/survey" />
+				<a href="${surveyUrl}">Survey</a>
+
+
+			</nav>
 		</div>
 	</header>
-	<nav>
+	<script>
+		window.onscroll = function() {
+			myFunction()
+		};
 
-		<div class="centered">
-			<c:url var="homeUrl" value="/homePage" />
-			<a href="#">Home Page</a>
-			<c:url var="surveyUrl" value="/survey" />
-			<a href="#">Survey</a>
-		</div>
+		var header = document.getElementById("myHeader");
+		var sticky = header.offsetTop;
 
-
-	</nav>
+		function myFunction() {
+			if (window.pageYOffset >= sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+	</script>

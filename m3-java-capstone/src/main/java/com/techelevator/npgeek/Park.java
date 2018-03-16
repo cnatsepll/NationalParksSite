@@ -18,6 +18,7 @@ public class Park {
 	private int entryFee;
 	private int animalSpecies;
 	private String parkImg;
+	private int voteCount;
 	
 	
 	
@@ -116,6 +117,12 @@ public class Park {
 	}
 	public void setParkImg(String parkImg) {
 		this.parkImg = parkImg;
+	}
+	public int getVoteCount() {
+		return voteCount;
+	}
+	public void setVoteCount(int voteCount) {
+		this.voteCount = voteCount;
 	}
 
 }

@@ -29,6 +29,14 @@ public class JdbcParkDao implements ParkDao{
 		return allParks;
 
 	}
+	
+	public Park getParkByParkCode(String parkCode) {
+		for(Park park: getAllParks()) {
+			if(park.getParkCode().equals(parkCode)) {
+				return park;
+			}
+		}return null;
+	}
 
 	private Park mapRowToProduct(SqlRowSet row) {
 		Park park = new Park();
@@ -47,7 +55,7 @@ public class JdbcParkDao implements ParkDao{
 		park.setDescription(row.getString("parkdescription"));
 		park.setEntryFee(row.getInt("entryfee"));
 		park.setAnimalSpecies(row.getInt("numberofanimalspecies"));
-		park.setParkImg(row.getString("parkcode").toLowerCase());
+		park.setParkImg("/img/parks/"+row.getString("parkcode").toLowerCase()+".jpg");
 		return park;
 	}
 }

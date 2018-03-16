@@ -1,5 +1,20 @@
 body {
-	background-color: rgba(79, 75, 63, 0.925);
+	background:
+		url('https://followers.com.ua/odessa/events/beregite-elki-anons-meropriyatii-18-21-dekabrya/950344899.jpg')
+		no-repeat center center fixed;
+	top: 0;
+	left: 0;
+	position: center;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	min-width: 5%;
+}
+
+header div {
+	background-color: rgba(50, 70, 70, 0.750)
 }
 
 .logo {
@@ -16,55 +31,142 @@ body {
 
 .centered {
 	text-align: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+}
+
+.surveyCentered {
+	background-color: rgb(240, 241, 241);
+	margin: auto;
+	padding: 15px;
+	width: 50%;
+	text-align: center;
+	border: solid 3px;
+	box-shadow: 5px 10px;
+	width: max-content;
 	margin-bottom: 50px;
+}
+.topMarginPush{
+	padding-top: 20px;
+}
+.topMarginPushSmall{
+	padding-top: 3
+	px;
+}
+
+.right {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky .content {
+	padding-top: 80px;
+}
+
+.content {
+	padding-top: 30px;
+}
+
+section.survey ul {
+	list-style: none;
 }
 
 .parks {
-	font-family: Helvetica;
-	font-size: 1.2em;
+	margin: 20px;
+	font-family: 'Ubuntu', serif;
 	color: rgb(242, 242, 242);
 	text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px rgb(0, 0, 0);
-	display: grid;
 	border: solid 3px;
 	border-radius: 5px;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(47, 94, 78, 1);
-	margin-bottom: 30px;
+	height: 19em;
+	width: 30em;
 }
 
-.parkImage img {
-	grid-column: span 2;
+section.parkDetail {
+	clear: both;
 	width: 100%;
-	height: 100%;
+	vertical-align: top;
+	min-height: 450px;
+	background-color: #FFF;
+	border-radius: 7px;
+	margin: 20px auto;
+	clear: both;
+}
+
+section.survey {
+	clear: both;
+	width: 100%;
+	vertical-align: top;
+	min-height: 450px;
+	background-color: #FFF;
+	border-radius: 7px;
+	margin: 20px auto;
+	clear: both;
+}
+
+section.parkDetail ul {
+	list-style: none;
 }
 
 .parkInfo {
-	grid-column: 2;
-	height: auto;
+	font-size: 1em;
 	width: 90%;
-	grid-row-template: 3;
-	display: grid;
-	grid-row-template: 3;
 	margin-left: 10px;
 }
 
 .parkName {
 	margin-top: 25px;
 	width: 35em;
-	grid-row: 1;
 }
 
 .location {
-	grid-row: 2;
 	padding: 5px;
 }
 
 .desciption {
-	grid-row: 3;
 	padding-top: 5px;
+}
+
+.detail {
+	display: block;
+}
+
+.detailInfo {
+	border: solid 3px;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	float: left;
+	flex-wrap: wrap;
+}
+
+.detailImg {
+	diplay: inline;
+	float: left;
+}
+
+a:link {
+	text-decoration: none;
+	color: blue;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #f0f;
+}
+
+a:hover {
+	color: #fff;
+	background-color: rgba(224, 224, 224, 0.650);
+	border-radius: 5px;
+}
+
+a:active {
+	text-decoration: underline;
+	color: white;
 }
