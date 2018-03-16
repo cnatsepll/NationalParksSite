@@ -27,7 +27,9 @@
 				<c:url var="homeUrl" value="/" />
 				<a href="${homeUrl}">Home Page</a>
 				<c:url var="surveyUrl" value="/survey" />
-				<a href="${surveyUrl}">Survey</a>
+				<a href="${surveyUrl}">Vote For Your Park!</a>
+				<c:url var="surveyResUrl" value="/surveyResults" />
+				<a href="${surveyResUrl}">Vote Results</a>
 
 
 			</nav>
@@ -37,10 +39,8 @@
 		window.onscroll = function() {
 			myFunction()
 		};
-
 		var header = document.getElementById("myHeader");
 		var sticky = header.offsetTop;
-
 		function myFunction() {
 			if (window.pageYOffset >= sticky) {
 				header.classList.add("sticky");

@@ -17,6 +17,16 @@ header div {
 	background-color: rgba(50, 70, 70, 0.750)
 }
 
+header h1{
+	padding: 5px;
+		text-shadow: 0 0 1px rgba(242, 242, 242, 0.540), 0 0 1px rgba(242, 242, 242,0.540);
+}
+
+header a{
+	padding: 10px;
+	margin-left: 20px;
+}
+
 .logo {
 	heigth: 150px;
 	width: 225px;
@@ -64,7 +74,7 @@ header div {
 }
 
 .sticky .content {
-	padding-top: 80px;
+	padding-top: 30px;
 }
 
 .content {
@@ -131,33 +141,36 @@ section.parkDetail ul {
 	padding-top: 5px;
 }
 
-.detail {
+section.parkdetail .detail {
+	display: block;
+}
+
+section.parkdetail div.weather {
 	display: block;
 }
 
 .detailInfo {
 	border: solid 3px;
-	width: 50%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	float: left;
-	flex-wrap: wrap;
+	width: 100%;
 }
 
 .detailImg {
 	diplay: inline;
 	float: left;
 }
+.weatherImg{
+	height: 100px;
+	width: 100px;
+}
 
 a:link {
 	text-decoration: none;
-	color: blue;
+	color: white;
 }
 
 a:visited {
 	text-decoration: none;
-	color: #f0f;
+	color: white;
 }
 
 a:hover {

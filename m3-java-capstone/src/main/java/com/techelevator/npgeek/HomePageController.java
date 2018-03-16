@@ -18,6 +18,9 @@ public class HomePageController {
 	@Autowired
 	ParkDao parkDao;
 	
+	@Autowired
+	WeatherDao weatherDao;
+	
 	
 	@RequestMapping(path="/", method=RequestMethod.GET)
 	public ModelAndView displayPage() {
@@ -28,6 +31,7 @@ public class HomePageController {
 	public String displayParkDetails(ModelMap modelHolder, @RequestParam String parkCode, HttpServletResponse response) throws IOException {
 	    try {
 	    	modelHolder.put("park", parkDao.getParkByParkCode(parkCode));
+	    	modelHolder.put("weather", weatherDao.getForeCast(parkCode));
 	    	return "parkDetail";
 	    } catch(NumberFormatException | IndexOutOfBoundsException e) {
 	    	response.sendError(HttpServletResponse.SC_BAD_REQUEST);

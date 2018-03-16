@@ -10,13 +10,14 @@
 	</c:if>
 	
 	<c:forEach var="results" items="${survey}">
-	<img src="${results.parkImg}">;
+	<c:url var="imageUrl" value="${results.parkImg}" />
+	<img src="${imageUrl}">
 	<ul>
-	<li><c:out value="${results.voteCount}" /></li>
-	<li><c:out value="${results.voteCount}" /></li>
-	<li><c:out value="${results.voteCount}" /></li>
-	<li><c:out value="${results.voteCount}" /></li>
-	<li><c:out value="${results.voteCount}" /></li>
+	<li><c:out value="${results.voteCount} votes." /></li>
+	<li><c:out value="${results.parkName}" /></li>
+	<li><c:out value="${results.state}" /></li>
+	<li><c:out value="${results.annualVisCount} visitors per year." /></li>
+	<li><c:out value="${results.milesOfTrail} miles of trail." /></li>
 	</ul>
 	
 	

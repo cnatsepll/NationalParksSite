@@ -62,6 +62,7 @@ public class JdbcSurveyDao implements SurveyDao{
 			newPark.setState(results.getString("state"));
 			newPark.setAnnualVisCount(results.getInt("annualvisitorcount"));
 			newPark.setMilesOfTrail(results.getDouble("milesoftrail"));
+			newPark.setParkImg("/img/parks/"+ results.getString("parkcode").toLowerCase()+".jpg");
 			favSurveys.add(newPark);
 		}
 		return favSurveys;
