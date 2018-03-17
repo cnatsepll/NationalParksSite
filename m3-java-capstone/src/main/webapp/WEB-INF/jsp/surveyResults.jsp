@@ -2,7 +2,7 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 <section class="survey">
-
+<div class ="content">
 	<c:if test="${not empty message}">
 		<div>
 			<c:out value="${message}" />
@@ -22,7 +22,7 @@
 	
 	
 	</c:forEach>
-
+</div>
 </section>
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

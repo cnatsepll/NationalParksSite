@@ -2,8 +2,10 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
-<div class="row">
+<div class="row content">
+
 	<c:forEach var="park" items="${parks}">
+	<div>
 		<c:url var="imageUrl" value="${park.parkImg}" />
 		<c:url var="parkDetail" value="/parkDetail">
 			<c:param name="parkCode" value="${park.parkCode}" />
@@ -20,11 +22,12 @@
 						<div class="location">
 							<c:out value="${park.state}" />
 						</div>
-						<div class="description">
+						<div class="description bottom">
 							<c:out value="${park.description}" />
 						</div>
 					</div>
 
+				</div>
 				</div>
 			</a>
 	</c:forEach>

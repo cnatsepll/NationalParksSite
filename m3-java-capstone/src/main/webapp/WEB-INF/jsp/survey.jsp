@@ -3,7 +3,8 @@
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
 
-<section class="survey">
+<section class="survey content">
+<div class ="content">
 
 <h1 class="centered topMarginPush">New Survey Post</h1>
 <br>
@@ -43,6 +44,8 @@
 </span>
 <br>
 <input type="submit" name="submit" class="tab10"/>
+</div>
+
 </div>
 </section>
 

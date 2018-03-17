@@ -19,6 +19,7 @@ public class Park {
 	private int animalSpecies;
 	private String parkImg;
 	private int voteCount;
+	private String degree;
 	
 	
 	
@@ -123,6 +124,13 @@ public class Park {
 	}
 	public void setVoteCount(int voteCount) {
 		this.voteCount = voteCount;
+	}
+	public void setDegree(String degree) {
+		this.degree = degree;
+		
+	}
+	public String getDegree() {
+		return degree;
 	}
 
 }

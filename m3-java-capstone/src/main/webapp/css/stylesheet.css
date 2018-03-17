@@ -14,29 +14,39 @@ body {
 }
 
 header div {
-	background-color: rgba(50, 70, 70, 0.750)
+	height: 170px;
+	background-color: rgba(80, 90, 70, 0.990);
+	overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    
 }
 
-header h1{
-	padding: 5px;
-		text-shadow: 0 0 1px rgba(242, 242, 242, 0.540), 0 0 1px rgba(242, 242, 242,0.540);
+
+header h1 {
+	margin-top: 10px;
+	margin-left: 10px;
+	text-shadow: 0 0 1px rgba(242, 242, 242, 0.540), 0 0 1px
+		rgba(242, 242, 242, 0.540);
 }
 
-header a{
+header a {
 	padding: 10px;
 	margin-left: 20px;
 }
 
 .logo {
-	heigth: 150px;
+	heigth: 130px;
 	width: 225px;
 }
 
 .row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
 }
 
 .centered {
@@ -54,31 +64,23 @@ header a{
 	width: max-content;
 	margin-bottom: 50px;
 }
-.topMarginPush{
+
+.topMarginPush {
 	padding-top: 20px;
 }
-.topMarginPushSmall{
-	padding-top: 3
-	px;
+
+.topMarginPushSmall {
+	padding-top: 3 px;
 }
 
 .right {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
 }
 
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.sticky .content {
-	padding-top: 30px;
-}
 
 .content {
-	padding-top: 30px;
+margin-top: 200px;
 }
 
 section.survey ul {
@@ -86,17 +88,20 @@ section.survey ul {
 }
 
 .parks {
-	margin: 20px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
 	font-family: 'Ubuntu', serif;
 	color: rgb(242, 242, 242);
 	text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px rgb(0, 0, 0);
 	border: solid 3px;
 	border-radius: 5px;
-	height: 19em;
-	width: 30em;
+	height: 21em;
+	width: 35em;
+	padding: 10px;
 }
 
-section.parkDetail {
+.parkDetail {
 	clear: both;
 	width: 100%;
 	vertical-align: top;
@@ -122,6 +127,9 @@ section.parkDetail ul {
 	list-style: none;
 }
 
+.submitButton{
+	padding-left: 10px;
+}
 .parkInfo {
 	font-size: 1em;
 	width: 90%;
@@ -141,26 +149,70 @@ section.parkDetail ul {
 	padding-top: 5px;
 }
 
-section.parkdetail .detail {
-	display: block;
-}
+.detail {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;}
 
 section.parkdetail div.weather {
 	display: block;
 }
 
 .detailInfo {
-	border: solid 3px;
-	width: 100%;
+	width: 70%;
+	margin-right: 4em;
 }
 
-.detailImg {
-	diplay: inline;
-	float: left;
+.detailImg img{
+	width: 100%;
+	display: flex;
+	margin: 15px;
 }
-.weatherImg{
+
+.weatherImg {
 	height: 100px;
 	width: 100px;
+}
+.weatherBox{
+		border-top: solid 3px;
+		background-color: rgb(240, 241, 241);
+	
+}
+.weather {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	
+}
+.forecastDay {
+	background-color: white;
+	justify-content: space-around;
+	vertical-align: top;
+	margin: 5px;
+	border: solid 2px;
+	border-radius: 10px;
+	
+}
+.weatherItemGrid{
+	grid-template-columns: 1;
+	grid-template-rows: 5;
+	padding: 5px;
+	
+}
+.weatherImg{
+	grid-row: 1/5;
+}
+.weatherForecast{
+	grid-row: 2/5;
+}
+.weatherTemp{
+	grid-row: 3/5;
+}
+.forecastWarning{
+	grid-row: 4/5;
+}
+.tempWarning{
+	grid-row: 5/5;
 }
 
 a:link {

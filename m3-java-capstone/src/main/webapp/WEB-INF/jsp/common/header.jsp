@@ -35,7 +35,7 @@
 			</nav>
 		</div>
 	</header>
-	<script>
+<script>
 		window.onscroll = function() {
 			myFunction()
 		};
