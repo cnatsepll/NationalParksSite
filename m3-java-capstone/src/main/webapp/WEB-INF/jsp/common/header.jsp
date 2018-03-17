@@ -19,7 +19,6 @@
 			<a href="${homePageHref}"> <img class="logo" src="${logoSrc}"
 				alt="National Park Geek Logo" />
 			</a>
-
 			<h1>Explore the National Parks!</h1>
 
 			<nav>
@@ -27,9 +26,9 @@
 				<c:url var="homeUrl" value="/" />
 				<a href="${homeUrl}">Home Page</a>
 				<c:url var="surveyUrl" value="/survey" />
-				<a href="${surveyUrl}">Vote For Your Park!</a>
+				<a href="${surveyUrl}">Vote For Your Favorite Park!</a>
 				<c:url var="surveyResUrl" value="/surveyResults" />
-				<a href="${surveyResUrl}">Vote Results</a>
+				<a href="${surveyResUrl}">Favorite Park Rankings</a>
 
 
 			</nav>

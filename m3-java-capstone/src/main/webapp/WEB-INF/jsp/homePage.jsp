@@ -2,8 +2,13 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
-<div class="row content">
 
+<div class="openingQuote content">
+<c:out value="Wilderness is more than a natural place, more than a place for recreation. It is a place for inspiration."/>
+</div>
+
+
+<div class="row ">
 	<c:forEach var="park" items="${parks}">
 	<div>
 		<c:url var="imageUrl" value="${park.parkImg}" />
@@ -22,11 +27,10 @@
 						<div class="location">
 							<c:out value="${park.state}" />
 						</div>
-						<div class="description bottom">
+						<div class="description">
 							<c:out value="${park.description}" />
 						</div>
 					</div>
-
 				</div>
 				</div>
 			</a>

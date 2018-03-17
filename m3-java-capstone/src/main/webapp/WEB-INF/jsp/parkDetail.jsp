@@ -10,8 +10,8 @@
 		</div>
 		<div class="detailInfo">
 			<ul class="detailList">
-				<li><c:out value="${park.parkName}" /></li>
-				<li><c:out value="${park.state}" /></li>
+				<li class="detailParkName"><c:out value="${park.parkName}" /></li>
+				<li class="detailParkLocation"><c:out value="${park.state}" /></li>
 				<li><c:out value="${park.acreage}" /></li>
 				<li><c:out value="${park.milesOfTrail}" /></li>
 				<li><c:out value="$ ${park.entryFee}" /></li>
@@ -28,24 +28,19 @@
 		</div>
 	</div>
 
-
-
-
 	<div class="weatherBox">
 		<div>
 	<a name="jump"></a>
 		<c:url var="formPost" value="/parkDetail" />
 		<form action="${formPost}" method="POST">
-			<div class="formEntry">
-			
-				<label for="tempChoice">Choose a temperature scale</label>
+			<div class="formEntry radioButtons">
+				<label for="tempChoice">Temperature scale select:</label>
 				<c:choose>
 				<c:when test="${isFahrenheit == true}">
 					<input type="radio" name="tempChoice" value= false checked="checked" >Fahrenheit 
 					<input type="radio" name="tempChoice" value= true>Celsius 
 					 <input type="hidden" name="parkCode" value="${park.parkCode}"> 
 					</c:when>
-					
 					<c:when test="${isFahrenheit == false || isFahrenheit == null}">
 					<input type="radio" name="tempChoice" value= false >Fahrenheit 
 					 <input type="radio" name="tempChoice" value= true checked="checked" >Celsius 
