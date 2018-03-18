@@ -235,15 +235,46 @@ section.surveyResult {
 	margin: 15px;
 	border-radius: 8px;
 }
-.detailParkName{
+
+.detailParkName {
 	font-size: 1.3em;
 	font-weight: bold;
 }
-.detailParkLocation{
+
+.detailParkLocation {
 	font-size: 1.2em;
 	font-weight: bold;
 	margin-bottom: 10px;
+}
+
+.surveyParkName {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.surveyParkLocation {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.surveyResults {
 	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+}
+
+.surveyImg img {
+	width: 100%;
+	display: flex;
+	margin: 15px;
+	border-radius: 8px;
+}
+
+.surveyInfo {
+	width: 70%;
+	margin-right: 4em;
 }
 
 .weatherImg {
